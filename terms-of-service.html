@@ -88,6 +88,16 @@
             position: relative;
         }
         
+        .logo-container a {
+            display: block;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .logo-container a:hover {
+            transform: scale(1.05);
+        }
+        
         .logo {
             width: 80px;
             height: 80px;
@@ -95,11 +105,6 @@
             object-fit: cover;
             border: 3px solid var(--accent-color);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
         }
         
         .header-content {
@@ -226,7 +231,9 @@
     <header>
         <div class="container">
             <div class="logo-container">
-                <img src="images/bot-mascot.jpg" alt="Manager Moldie Bot Mascot" class="logo">
+                <a href="index.html">
+                    <img src="images/bot-mascot.jpg" alt="Manager Moldie Bot Mascot" class="logo">
+                </a>
             </div>
             <div class="header-content">
                 <h1>Manager Moldie</h1>
