@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Moldie | Legal Pages</title>
+    <style>
+        :root {
+            --primary-color: #8BC34A;
+            --secondary-color: #4E6E39;
+            --text-color: #3E3E3E;
+            --light-color: #FFFFFF;
+            --accent-color: #FFB74D;
+            --background-color: #E8F5E9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('images/village-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .main-content {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .button:hover {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            margin-top: auto;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        .footer a {
+            color: var(--light-color);
+            text-decoration: underline;
+        }
+        
+        .bot-image {
+            max-width: 300px;
+            margin: 30px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--accent-color);
+        }
+        
+        .mascot-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .floating-leaves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.7;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        .mascot-image {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/bot-mascot.jpg" alt="Manager Moldie Bot Mascot" class="logo">
+            </div>
+            <h1>Manager Moldie</h1>
+            <p>Discord Clan Management Bot</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <h2>Legal Documentation</h2>
+            <p>Welcome to Manager Moldie's legal documentation. Here you'll find our Privacy Policy and Terms of Service that govern the use of our Discord clan management bot.</p>
+            
+            <div class="mascot-container">
+                <img src="images/village-background.jpg" alt="Discord Clan Management Bot World" class="bot-image">
+            </div>
+            
+            <p>Manager Moldie is designed to help Discord server owners manage their gaming clans efficiently. Please review our legal documents to understand how we handle your data and the terms of using our service.</p>
+            
+            <div class="buttons">
+                <a href="privacy-policy.html" class="button">Privacy Policy</a>
+                <a href="terms-of-service.html" class="button">Terms of Service</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1356260560626516009" class="button" target="_blank">Add to Discord</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Manager Moldie. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-service.html">Terms of Service</a> |
+                <a href="https://discord.com/oauth2/authorize?client_id=1356260560626516009" target="_blank">Add to Discord</a>
+            </p>
+            <p>Created by <a href="https://github.com/LulzXOXO" target="_blank">Lulz</a></p>
+        </div>
+    </footer>
+</body>
+</html>

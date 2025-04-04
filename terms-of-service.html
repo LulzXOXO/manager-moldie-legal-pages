@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Moldie | Terms of Service</title>
+    <style>
+        :root {
+            --primary-color: #8BC34A;
+            --secondary-color: #4E6E39;
+            --text-color: #3E3E3E;
+            --light-color: #FFFFFF;
+            --accent-color: #FFB74D;
+            --background-color: #E8F5E9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 0;
+            margin: 0;
+            background-image: url('images/village-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 20px 0 10px;
+            color: var(--secondary-color);
+        }
+        
+        p, ul, ol {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+        }
+        
+        .section {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            margin-top: 40px;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        .footer a {
+            color: var(--light-color);
+            text-decoration: underline;
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: var(--accent-color);
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .mascot-corner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            z-index: 100;
+            opacity: 0.9;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/bot-mascot.jpg" alt="Manager Moldie Bot Mascot" class="logo">
+            </div>
+            <h1>Manager Moldie</h1>
+            <p>Terms of Service</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Manager Moldie Discord bot (the "Bot") operated by us.</p>
+            <p>Your access to and use of the Bot is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Bot.</p>
+            <p>By accessing or using the Bot, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Bot.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Use of the Bot</h2>
+            <h3>Eligibility</h3>
+            <p>You must be at least 13 years of age to use the Bot. By using the Bot, you represent and warrant that you are at least 13 years of age and that you have the right, authority, and capacity to agree to and abide by these Terms.</p>
+            
+            <h3>Discord Terms</h3>
+            <p>Your use of the Bot is also subject to Discord's Terms of Service, which can be found at <a href="https://discord.com/terms" target="_blank">https://discord.com/terms</a>. You acknowledge that you have read and agree to Discord's Terms of Service.</p>
+            
+            <h3>User Conduct</h3>
+            <p>You agree to use Manager Moldie only for lawful purposes and in accordance with these Terms. You agree not to use the Bot:</p>
+            <ul>
+                <li>Violates Discord's Terms of Service or Community Guidelines</li>
+                <li>Is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable</li>
+                <li>Impersonates any person or entity, or falsely states or otherwise misrepresents your affiliation with a person or entity</li>
+                <li>Interferes with or disrupts the Bot or servers or networks connected to the Bot</li>
+                <li>Attempts to gain unauthorized access to the Bot, other accounts, computer systems, or networks connected to the Bot</li>
+                <li>Introduces viruses, worms, Trojan horses, or other harmful code</li>
+                <li>Engages in any automated use of the system, such as using scripts to send messages or commands</li>
+                <li>Attempts to reverse engineer, decompile, or otherwise try to extract the source code of the Bot</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Bot Features and Functionality</h2>
+            <p>The Bot provides clan management features for Discord servers. These features may include, but are not limited to:</p>
+            <ul>
+                <li>Clan member management</li>
+                <li>Clan event scheduling</li>
+                <li>Role assignment and management</li>
+                <li>Clan statistics tracking</li>
+                <li>Automated notifications</li>
+            </ul>
+            <p>We reserve the right to modify, suspend, or discontinue any part of the Bot at any time without prior notice or liability.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Intellectual Property</h2>
+            <p>The Bot and its original content, features, and functionality are and will remain the exclusive property of the Bot's creator and its licensors. The Bot is protected by copyright, trademark, and other laws of both the United States and foreign countries.</p>
+            <p>Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of the Bot's creator.</p>
+        </div>
+        
+        <div class="section">
+            <h2>User Content</h2>
+            <p>The Bot may allow you to submit, store, send, or receive content ("User Content"). You retain ownership of your User Content.</p>
+            <p>By submitting, storing, sending, or receiving User Content through the Bot, you grant us a worldwide, non-exclusive, royalty-free license to use, copy, reproduce, process, adapt, modify, publish, transmit, display, and distribute such User Content for the purpose of providing and improving the Bot's services.</p>
+            <p>You represent and warrant that you have all rights, power, and authority necessary to grant the rights granted herein to any User Content that you submit.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Limitation of Liability</h2>
+            <p>In no event shall the Bot's creator, its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your access to or use of or inability to access or use the Bot</li>
+                <li>Any conduct or content of any third party on the Bot</li>
+                <li>Any content obtained from the Bot</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+            </ul>
+            <p>Whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Disclaimer</h2>
+            <p>Your use of the Bot is at your sole risk. The Bot is provided on an "AS IS" and "AS AVAILABLE" basis. The Bot is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
+            <p>We do not warrant that the Bot will function uninterrupted, secure, or available at any particular time or location, or that any errors or defects will be corrected.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless the Bot's creator, its directors, employees, partners, agents, suppliers, and affiliates, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees) arising from:</p>
+            <ul>
+                <li>Your use of and access to the Bot</li>
+                <li>Your violation of any term of these Terms</li>
+                <li>Your violation of any third-party right, including without limitation any copyright, property, or privacy right</li>
+                <li>Any claim that your User Content caused damage to a third party</li>
+            </ul>
+            <p>This defense and indemnification obligation will survive these Terms and your use of the Bot.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Changes to These Terms</h2>
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+            <p>By continuing to access or use our Bot after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Bot.</p>
+            <p class="last-updated">Last Updated: April 4, 2025</p>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            <ul>
+                <li>Email: [Your Email]</li>
+                <li>Discord: [Your Discord Server or Username]</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Manager Moldie. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-service.html">Terms of Service</a> |
+                <a href="https://discord.com/oauth2/authorize?client_id=1356260560626516009" target="_blank">Add to Discord</a>
+            </p>
+            <p>Created by <a href="https://github.com/LulzXOXO" target="_blank">Lulz</a></p>
+        </div>
+    </footer>
+    
+    <img src="images/bot-mascot.jpg" alt="Bot Mascot" class="mascot-corner">
+</body>
+</html>
