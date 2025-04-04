@@ -25,12 +25,11 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
-            padding: 0;
-            margin: 0;
             background-image: url('images/village-background.jpg');
             background-size: cover;
-            background-position: center;
             background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
         
@@ -41,48 +40,90 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.85);
             z-index: -1;
         }
         
         .container {
-            max-width: 1000px;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(78, 110, 57, 0.9);
+            color: var(--light-color);
+            padding: 20px 0;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid var(--accent-color);
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/header-pattern.svg');
+            background-size: 200px;
+            background-repeat: repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        header .container {
+            display: flex;
+            align-items: center;
             position: relative;
             z-index: 1;
         }
         
-        header {
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 5px solid var(--accent-color);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
         .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
+            margin-right: 20px;
+            position: relative;
         }
         
         .logo {
-            max-width: 150px;
-            height: auto;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
+            object-fit: cover;
             border: 3px solid var(--accent-color);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .header-decoration {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+            opacity: 0.7;
         }
         
         h2 {
@@ -187,8 +228,11 @@
             <div class="logo-container">
                 <img src="images/bot-mascot.jpg" alt="Manager Moldie Bot Mascot" class="logo">
             </div>
-            <h1>Manager Moldie</h1>
-            <p>Terms of Service</p>
+            <div class="header-content">
+                <h1>Manager Moldie</h1>
+                <p>Terms of Service</p>
+            </div>
+            <img src="images/header-decoration.svg" alt="Decorative Element" class="header-decoration">
         </div>
     </header>
     
