@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Commands | Discord Clan Management Bot</title>
+    <style>
+        :root {
+            --primary-color: #8BC34A;
+            --secondary-color: #4E6E39;
+            --text-color: #3E3E3E;
+            --light-color: #FFFFFF;
+            --accent-color: #FFB74D;
+            --background-color: #E8F5E9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('images/village-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .main-content {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .command-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .command-list {
+            list-style-type: none;
+        }
+        
+        .command-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .command-item::before {
+            content: '•';
+            color: var(--primary-color);
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        .command-name {
+            font-family: 'Courier New', monospace;
+            background-color: rgba(139, 195, 74, 0.1);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .command-description {
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            margin-top: auto;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        .footer a {
+            color: var(--light-color);
+            text-decoration: underline;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: var(--light-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+        
+        .back-to-top:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        .admin-note {
+            font-size: 0.8em;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/bot-mascot.jpg" alt="Discord Clan Management Bot Mascot" class="logo">
+            </div>
+            <h1>Bot Commands</h1>
+            <p>Complete list of commands for the Discord Clan Management Bot</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <p>Below you'll find a comprehensive list of all commands available in our Discord Clan Management Bot. Commands are organized by category for easy reference.</p>
+            
+            <div class="command-section">
+                <h2 id="character-commands">Character Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/character create</span>
+                        <span class="command-description">- Create a new character</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/character list</span>
+                        <span class="command-description">- List all your characters</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/character show_all</span>
+                        <span class="command-description">- Show all characters for all members</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/character find</span>
+                        <span class="command-description">- Find a character by name</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/character remove</span>
+                        <span class="command-description">- Remove a character</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/character update</span>
+                        <span class="command-description">- Update a character's details</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="clan-commands">Clan Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/clan list</span>
+                        <span class="command-description">- List all clans</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/clan add</span>
+                        <span class="command-description">- Add a new clan <span class="admin-note">(admin)</span></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="dice-commands">Dice Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/dice roll</span>
+                        <span class="command-description">- Roll a dice (1-100 or 1-1000)</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/dice create_event</span>
+                        <span class="command-description">- Create new dice event <span class="admin-note">(admin)</span></span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/dice end_event</span>
+                        <span class="command-description">- End current dice event <span class="admin-note">(admin)</span></span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/dice reset_rolls</span>
+                        <span class="command-description">- Reset all rolls <span class="admin-note">(admin)</span></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="borrow-commands">Borrow Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/borrow add</span>
+                        <span class="command-description">- Add a borrowed item</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/borrow list</span>
+                        <span class="command-description">- List borrowed items</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/borrow remove</span>
+                        <span class="command-description">- Remove a borrowed item</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="admin-commands">Admin Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/user character_create</span>
+                        <span class="command-description">- Create a character for another user</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/user character_list</span>
+                        <span class="command-description">- List all characters for a user</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/user character_remove</span>
+                        <span class="command-description">- Remove a character for a user</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="enemy-commands">Enemy Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/enemy add</span>
+                        <span class="command-description">- Add an enemy player <span class="admin-note">(admin)</span></span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/enemy remove</span>
+                        <span class="command-description">- Remove an enemy player by name <span class="admin-note">(admin)</span></span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/enemy search</span>
+                        <span class="command-description">- Search for enemy players</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/enemy show_all</span>
+                        <span class="command-description">- Show all enemy players sorted by clan</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/enemy upload</span>
+                        <span class="command-description">- Upload a text file with enemy players (format: name,clan). Each line should contain the player's name followed by their clan name, separated by a comma.</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/enemy export</span>
+                        <span class="command-description">- Export enemy players to a text file <span class="admin-note">(admin)</span></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="command-section">
+                <h2 id="other-commands">Other Commands</h2>
+                <ul class="command-list">
+                    <li class="command-item">
+                        <span class="command-name">/help</span>
+                        <span class="command-description">- Show this help message</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/ping</span>
+                        <span class="command-description">- Check bot response time</span>
+                    </li>
+                    <li class="command-item">
+                        <span class="command-name">/info about</span>
+                        <span class="command-description">- Show bot information</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top">↑</a>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Discord Clan Management Bot. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-service.html">Terms of Service</a> | 
+                <a href="commands.html">Commands</a>
+            </p>
+            <p>Special thanks to: Makakou, Daxio, Nagato, Ali</p>
+        </div>
+    </footer>
+</body>
+</html>
